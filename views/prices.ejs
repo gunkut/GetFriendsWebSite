@@ -1,0 +1,68 @@
+<%- include("includes/head.ejs") %>
+  <link rel="stylesheet" href="/css/users.css" />
+  <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+  <%- include("includes/navbar.ejs") %>
+  <main>
+    <section id="pricing" class="mt-5">
+      <div class="container-lg">
+        <div class="text-center">
+          <h2>Pricing Plans</h2>
+          <p class="lead text-muted">Choose a pricing plan to suit you</p>
+        </div>
+        <div class="row my-5 align-items-center justify-content-center g-0">
+          <div class="col-8 col-lg-4 col-xl-3">
+            <div class="card border-0">
+              <div class="card-body text-center py-4">
+                <h4 class="card-title">Bronze Membership</h4>
+                <p class="display-5 my-4 text-primary fw-bold">$12.99</p>
+                <p class="card-text mx-5 text-muted d-none d-lg-block">
+                  Add 5 friends a month.
+                </p>
+                <a href="#" class="btn btn-outline-primary btn-lg mt-3"
+                  >Buy Now</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="col-9 col-lg-4">
+            <div class="card border-primary border-2">
+              <div class="card__header text-center text-primary mt-3">
+                Most Popular
+              </div>
+              <div class="card-body text-center py-5">
+                <h4 class="card-title">Gold Membership</h4>
+                <p class="display-4 my-4 text-primary fw-bold">$19.99</p>
+                <p class="card-text mx-5 text-muted d-none d-lg-block">
+                  Add 10 friends a month and send photos.
+                </p>
+                <a href="#" class="btn btn-outline-primary btn-lg mt-3"
+                  >Buy Now</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="col-8 col-lg-4 col-xl-3">
+            <div class="card border-0">
+              <div class="card-body text-center py-4">
+                <h4 class="card-title">Platinum Membership</h4>
+                <p class="display-5 my-4 text-primary fw-bold">$29.99</p>
+                <p class="card-text mx-5 text-muted d-none d-lg-block">
+                  Add 20 friends a month, send photos and watch movies at the same time.
+                </p>
+                <a href="#" class="btn btn-outline-primary btn-lg mt-3"
+                  >Buy Now</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <%- include("includes/footer.ejs") %>
+</body>

@@ -1,6 +1,3 @@
-body {
-  background-image: -webkit-linear-gradient(65deg, #838de3 50%, #e4e9fd 50%);
-}
 .grid {
   display: flex;
   flex-wrap: wrap;
@@ -10,29 +7,32 @@ body {
 
 .card {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+  background-image: -webkit-linear-gradient(65deg, #dfe0ee 30%, #838de3 80%);
+  border: solid 0.5px;
+  border-radius: 15%;
 }
 
-.card__header,
-.card__content {
+.card-header,
+.card-content {
   padding: 1rem;
 }
 
-.card__header h1,
-.card__content h1,
-.card__content h2,
-.card__content p {
+.card-header h1,
+.card-content h1,
+.card-content h2,
+.card-content p {
   margin: 0;
 }
 
-.card__image {
+.card-image {
   width: 100%;
 }
 
-.card__image img {
+.card-image img {
   width: 100%;
 }
 
-.user-item {
+.user__item {
   width: 20rem;
   max-width: 95%;
   margin: 1rem;
@@ -41,7 +41,6 @@ body {
 .user__name,
 .user__username {
   font-size: 1.2rem;
-  text-align: center;
 }
 
 .user__username {
@@ -50,12 +49,9 @@ body {
 
 .user__name,
 .user__email {
-  text-align: center;
   color: #4d4d4d;
-  margin-bottom: 0.5rem;
 }
 
 .user__description {
-  text-align: center;
   font-style: italic;
 }

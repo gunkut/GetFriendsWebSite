@@ -5,7 +5,8 @@ const path = require("path");
 const addUser = require("./routes/addUser");
 const registeredUsers = require("./routes/registeredUsers");
 const about = require("./routes/about");
-const errorController = require("./controllers/error");
+const errorPageController = require("./controllers/error");
+const prices = require("./routes/prices");
 
 app.set("view engine", "ejs");
 app.set("views", "views");
@@ -17,8 +18,9 @@ app.use(express.static(path.join(__dirname, "img")));
 app.use(addUser.routes);
 app.use(registeredUsers);
 app.use(about);
+app.use(prices);
 
-app.use(errorController.get404);
+app.use(errorPageController.get404);
 
 app.listen(3000, () => {
   console.log("Server started on port 3000");

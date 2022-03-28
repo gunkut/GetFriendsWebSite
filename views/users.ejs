@@ -5,27 +5,29 @@
     <%- include("includes/navbar.ejs") %>
     <main>
       <% if (users.length > 0) { %>
-      <div class="grid">
+      <div class="grid text-center">
         <% for (let user of users) { %>
-        <article class="card user-item">
-          <header class="card__header">
-            <h1 class="user__username"><%= user.username %></h1>
-          </header>
-          <div class="card__image">
-            <img
+        <article class="card user__item">
+          <div class="user">
+            <header class="card-header">
+              <h1 class="user__username"><%= user.username %></h1>
+            </header>
+            <div class="card-image">
+              <img
               src=<%= user.imageUrl %>
               alt=<%= user.username %>
               />
-          </div>
-          <div class="card__content">
-            <h2 class="user__name my-3"><%= user.name %></h2>
-            <h3 class="user__email"><%= user.email %></h3>
-            <p class="user__description my-5"><%= user.description %></p>
+            </div>
+            <div class="card-content">
+              <h2 class="user__name my-3"><%= user.name %></h2>
+              <h6 class="user__email"><%= user.email %></h6>
+              <p class="user__description my-5"><%= user.description.substring(0, 100) + " ..." %> <a href="/prices">Read More</a></p>
+            </div>
           </div>
         </article>
         <% } %>
       </div>
       <% } else { %>
-      <h1>No Users Found</h1>
+      <h1 class="text-center">No Users Found</h1>
       <% } %>
     </main>
