@@ -1,0 +1,31 @@
+<%- include("includes/head.ejs") %>
+  <link rel="stylesheet" href="/css/users.css" />
+</head>
+  <body>
+    <%- include("includes/navbar.ejs") %>
+    <main>
+      <% if (users.length > 0) { %>
+      <div class="grid">
+        <% for (let user of users) { %>
+        <article class="card user-item">
+          <header class="card__header">
+            <h1 class="user__username"><%= user.username %></h1>
+          </header>
+          <div class="card__image">
+            <img
+              src=<%= user.imageUrl %>
+              alt=<%= user.username %>
+              />
+          </div>
+          <div class="card__content">
+            <h2 class="user__name my-3"><%= user.name %></h2>
+            <h3 class="user__email"><%= user.email %></h3>
+            <p class="user__description my-5"><%= user.description %></p>
+          </div>
+        </article>
+        <% } %>
+      </div>
+      <% } else { %>
+      <h1>No Users Found</h1>
+      <% } %>
+    </main>
