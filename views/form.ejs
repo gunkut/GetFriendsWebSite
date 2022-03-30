@@ -1,143 +1,151 @@
-<%- include("includes/head.ejs") %>
-<body>
-  <%- include("includes/navbar.ejs") %>
+<head>
+  <%- include("includes/head.ejs") %>
+  <body>
+    <%- include("includes/navbar.ejs") %>
 
-  <section class="my-5">
-    <div class="container-lg">
-      <div class="text-center">
-        <h2>Go Ahead</h2>
-        <p class="lead">Create your profile and meet others</p>
-      </div>
-      <div class="row justify-content-center my-5">
-        <div class="col-lg-6">
-          <form action="/users-form" method="POST">
-            <label for="name" class="form-label">Name</label>
-            <div class="input-group mb-4">
-              <span class="input-group-text">
-                <i class="fa-solid fa-user"></i>
-              </span>
-              <input
-                class="form-control"
-                type="text"
-                name="name"
-                id="name"
-                placeholder="e.g. Gunkut Gultekin"
-              />
-              <span class="input-group-text">
-                <span
-                  class="tt"
-                  data-bs-placement="bottom"
-                  title="Optional part"
-                >
-                  <i class="fa-solid fa-question text-muted"></i>
+    <section class="my-5">
+      <div class="container-lg">
+        <div class="text-center">
+          <h2>Go Ahead</h2>
+          <p class="lead">Create your profile and meet others</p>
+        </div>
+        <div class="row justify-content-center my-5">
+          <div class="col-lg-6">
+            <form action="/users-form" method="POST">
+              <label for="name" class="form-label">Name</label>
+              <div class="input-group mb-4">
+                <span class="input-group-text">
+                  <i class="fa-solid fa-user"></i>
                 </span>
-              </span>
-            </div>
-
-            <label for="username" class="form-label">Username</label>
-            <div class="input-group mb-4">
-              <span class="input-group-text">
-                <i class="fa-solid fa-user-ninja"></i>
-              </span>
-              <input
-                class="form-control"
-                type="text"
-                name="username"
-                id="username"
-                placeholder="e.g. gege"
-              />
-            </div>
-
-            <label for="username" class="form-label">Password</label>
-            <div class="input-group mb-4">
-              <span class="input-group-text">
-                <i class="fa-solid fa-lock"></i>
-              </span>
-              <input
-                class="form-control"
-                type="password"
-                name="password"
-                id="password"
-                placeholder="e.g. qwerty"
-              />
-              <span class="input-group-text">
-                <span
-                  class="tt"
-                  data-bs-placement="bottom"
-                  title="Just kidding, be more creative then 'qwerty'"
-                >
-                  <i class="fa-solid fa-question text-muted"></i>
+                <input
+                  class="form-control"
+                  type="text"
+                  name="name"
+                  id="name"
+                  placeholder="e.g. Gunkut Gultekin"
+                />
+                <span class="input-group-text">
+                  <span
+                    class="tt"
+                    data-bs-placement="bottom"
+                    title="Optional part"
+                  >
+                    <i class="fa-solid fa-question text-muted"></i>
+                  </span>
                 </span>
-              </span>
-            </div>
+              </div>
 
-            <label for="email" class="form-label">Email</label>
-            <div class="input-group mb-4">
-              <span class="input-group-text">
-                <i class="fa-solid fa-at"></i>
-              </span>
-              <input
-                class="form-control"
-                type="text"
-                name="email"
-                id="email"
-                placeholder="gunkut@exapmle.com"
-                autocomplete="off"
-              />
-              <span class="input-group-text">
-                <span
-                  class="tt"
-                  data-bs-placement="bottom"
-                  title="Enter an email address so other users can contact you personally (Optional)."
-                >
-                  <i class="fa-solid fa-question text-muted"></i>
+              <label for="username" class="form-label">Username</label>
+              <div class="input-group mb-4">
+                <span class="input-group-text">
+                  <i class="fa-solid fa-user-ninja"></i>
                 </span>
-              </span>
-            </div>
+                <input
+                  class="form-control"
+                  type="text"
+                  name="username"
+                  id="username"
+                  placeholder="e.g. gege"
+                />
+              </div>
 
-            <label for="photo" class="form-label">Photo Link</label>
-            <div class="input-group mb-4">
-              <span class="input-group-text">
-                <i class="fa-solid fa-image"></i>
-              </span>
-              <input
-                class="form-control"
-                type="text"
-                name="imageUrl"
-                id="imageUrl"
-                placeholder="Add url here"
-              />
-              <span class="input-group-text">
-                <span
-                  class="tt"
-                  data-bs-placement="bottom"
-                  title="Optional part"
-                >
-                  <i class="fa-solid fa-question text-muted"></i>
+              <label for="username" class="form-label">Password</label>
+              <div class="input-group mb-4">
+                <span class="input-group-text">
+                  <i class="fa-solid fa-lock"></i>
                 </span>
-              </span>
-            </div>
+                <input
+                  class="form-control"
+                  type="password"
+                  name="password"
+                  id="password"
+                  placeholder="e.g. qwerty"
+                />
+                <span class="input-group-text">
+                  <span
+                    class="tt"
+                    data-bs-placement="bottom"
+                    title="Just kidding, be more creative then 'qwerty'"
+                  >
+                    <i class="fa-solid fa-question text-muted"></i>
+                  </span>
+                </span>
+              </div>
 
-            <div class="form-floating my-5">
-              <textarea
-                class="form-control"
-                name="description"
-                id="description"
-                style="height: 140px"
-              ></textarea>
-              <label for="description" class="form-label"
-                >Tell us about yourself.</label
-              >
-            </div>
-            <div class="my-5 text-center">
-              <button class="btn btn-secondary" type="submit" id="submitButton">Submit</button>
-            </div>
-          </form>
+              <label for="email" class="form-label">Email</label>
+              <div class="input-group mb-4">
+                <span class="input-group-text">
+                  <i class="fa-solid fa-at"></i>
+                </span>
+                <input
+                  class="form-control"
+                  type="text"
+                  name="email"
+                  id="email"
+                  placeholder="gunkut@exapmle.com"
+                  autocomplete="off"
+                />
+                <span class="input-group-text">
+                  <span
+                    class="tt"
+                    data-bs-placement="bottom"
+                    title="Enter an email address so other users can contact you personally (Optional)."
+                  >
+                    <i class="fa-solid fa-question text-muted"></i>
+                  </span>
+                </span>
+              </div>
+
+              <label for="photo" class="form-label">Photo Link</label>
+              <div class="input-group mb-4">
+                <span class="input-group-text">
+                  <i class="fa-solid fa-image"></i>
+                </span>
+                <input
+                  class="form-control"
+                  type="text"
+                  name="imageUrl"
+                  id="imageUrl"
+                  placeholder="Add url here"
+                />
+                <span class="input-group-text">
+                  <span
+                    class="tt"
+                    data-bs-placement="bottom"
+                    title="Optional part"
+                  >
+                    <i class="fa-solid fa-question text-muted"></i>
+                  </span>
+                </span>
+              </div>
+
+              <div class="form-floating my-5">
+                <textarea
+                  class="form-control"
+                  name="description"
+                  id="description"
+                  style="height: 140px"
+                ></textarea>
+                <label for="description" class="form-label"
+                  >Tell us about yourself.</label
+                >
+              </div>
+              <div class="my-5 text-center">
+                <button
+                  class="btn btn-secondary"
+                  type="submit"
+                  id="submitButton"
+                >
+                  Submit
+                </button>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <%- include("includes/footer.ejs") %>
-  <script src="../form.js"></script>
-</body>
+    <%- include("includes/footer.ejs") %>
+    <script src="../form.js"></script>
+  </body>
+</head>

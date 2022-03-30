@@ -1,38 +1,41 @@
-<%- include("includes/head.ejs") %>
+<head>
+  <%- include("includes/head.ejs") %>
   <link rel="stylesheet" href="/css/users.css" />
+  <link rel="stylesheet" href="/css/main.css" />
 </head>
-  <body>
-    <%- include("includes/navbar.ejs") %>
-    <main>
-      <% if (users.length > 0) { %>
-      <div class="grid text-center">
-        <% for (let user of users) { %>
-        <article class="card user__item">
-          <div class="user">
-            <header class="card-header">
-              <h1 class="user__username"><%= user.username %></h1>
-            </header>
-            <div class="card-image">
-              <img
+<body>
+  <%- include("includes/navbar.ejs") %>
+  <main>
+    <% if (users.length > 0) { %>
+    <div class="grid text-center">
+      <% for (let user of users) { %>
+      <article class="card user__item">
+        <div class="user">
+          <header class="card-header">
+            <h1 class="user__username"><%= user.username %></h1>
+          </header>
+          <div class="card-image">
+            <img
               src=<%= user.imageUrl %>
               alt=<%= user.username %>
               />
-            </div>
-            <div class="card-content">
-              <h2 class="user__name my-3"><%= user.name %></h2>
-              <h6 class="user__email"><%= user.email %></h6>
-              <p class="user__description my-5"><% if (user.description.length >= 100) { %>
-                <%= user.description.substring(0, 100) + " ..." %> <a href="/prices">Read More</a>
-              <% } else { %>
-                <%= user.description %>
-              <% } %> </p>
-            </div>
           </div>
-        </article>
-        <% } %>
-      </div>
-      <% } else { %>
-      <h1 class="text-center">Users Not Found</h1>
+          <div class="card-content">
+            <h2 class="user__name my-3"><%= user.name %></h2>
+            <h6 class="user__email"><%= user.email %></h6>
+            <p class="user__description my-5">
+              <% if (user.description.length >= 100) { %> <%=
+              user.description.substring(0, 100) + " ..." %>
+              <a href="/prices">Read More</a> <% } else { %> <%=
+              user.description %> <% } %>
+            </p>
+          </div>
+        </div>
+      </article>
       <% } %>
-    </main>
-    
+    </div>
+    <% } else { %>
+    <h1 class="text-center">Users Not Found</h1>
+    <% } %>
+  </main>
+</body>
